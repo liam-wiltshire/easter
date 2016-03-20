@@ -6,22 +6,17 @@
         <script src="cordova.js"></script>
     </head>
     <body>
-        <h1>Scan your code</h1>
+        <h1>Where To Go?</h1>
+        
+        <img src='images/sainsburys.png' />
+        <p>Eggs To Find: 10</p>
         
         <script>
             document.addEventListener('deviceready', onDeviceReady, false); 
             function onDeviceReady(){
                 
                 try{
-                    cordova.plugins.barcodeScanner.scan(
-                       function (result) {
-
-                            document.location.href=result.text + ".html";
-                       }, 
-                       function (error) {
-                           alert("Scanning failed: " + error);
-                       }
-                    );
+                    
                 } catch (e){
                     alert(e);
                 }

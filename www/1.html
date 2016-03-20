@@ -2,26 +2,24 @@
 <html>
     <head>
         <link rel='stylesheet' href='app.css' />
+        <link rel='stylesheet' href='images/jquery.jqpuzzle.css' />
         <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
         <script src="cordova.js"></script>
+        <script src="images/jquery.js"></script>
+        <script src="images/jquery.jqpuzzle.min.js"></script>
+        
     </head>
     <body>
-        <h1>Scan your code</h1>
+        <h1>What is this picture telling you?</h1>
+        <img src='images/bicycle.jpg' class="jqPuzzle jqp-r3-c3-SAECB" />
+        <p>Eggs To Find: 3</p>
         
         <script>
             document.addEventListener('deviceready', onDeviceReady, false); 
             function onDeviceReady(){
                 
                 try{
-                    cordova.plugins.barcodeScanner.scan(
-                       function (result) {
-
-                            document.location.href=result.text + ".html";
-                       }, 
-                       function (error) {
-                           alert("Scanning failed: " + error);
-                       }
-                    );
+                    
                 } catch (e){
                     alert(e);
                 }

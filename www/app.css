@@ -5,8 +5,17 @@ body {
     
     font-size:15px;
     margin:10px;
+    margin-bottom:60px;
 }
 
+body > img, body > iframe {
+    width:95%;
+    margin:10px 2.5%;
+}
+
+p {
+    text-align:center;
+}
 h1 {
     font-size:26px;
     font-weight:200;
