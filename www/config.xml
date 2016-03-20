@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.webulations.easter"
+        versionCode="001" 
+        version   = "0.0.1">
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Easter Hunt</name>
+
+    <description>
+        Easter Egg Hunt
+    </description>
+
+    <author href="http://w.iltshi.re" email="liam@w.iltshi.re">
+        Liam Wiltshire
+    </author>
+    <preference name="phonegap-version" value="3.7.0" />
+    <preference name="orientation" value="portrait" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="detect-data-types" value="false" />
+    <preference name="show-splash-screen-spinner" value="false" />
+    <preference name="android-installLocation" value="auto" />
+    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="splash-screen-duration" value="10000" />
+	
+<!-- Settings Icon -->
+<icon src="icon-small.png" gap:platform="ios" width="29" height="29" />
+
+
+<!-- iPhone / iPod Touch -->
+<icon src="icon.png" gap:platform="ios" width="57" height="57" />
+<icon src="icon@2x.png" gap:platform="ios" width="114" height="114" />
+
+<!-- iPad -->
+<icon src="icon-72.png" gap:platform="ios" width="72" height="72" />
+<icon src="icon-72@2x.png" gap:platform="ios" width="144" height="144" />
+
+
+<!-- iPad Spotlight and Settings Icon -->
+<icon src="icon-50.png" gap:platform="ios" width="50" height="50" />
+<icon src="icon-50@2x.png" gap:platform="ios" width="100" height="100" />
+
+<icon src="icon-72.png" gap:platform="android" />
+
+
+    
+        <!-- iPhone and iPod touch -->
+   
+   <!-- https://github.com/phonegap-build/StatusBarPlugin/blob/0944be5c9f96ca0e39e0079f46ffc37894a586cd/README.md -->
+    <gap:plugin name="com.phonegap.plugin.statusbar" />
+   <!-- https://github.com/apache/cordova-plugin-network-information/blob/df7aac845dc7deddbdb76e89216776a802ee8b67/doc/index.md -->
+    <gap:plugin name="org.apache.cordova.network-information" version="0.2.7" />
+   <!-- https://github.com/apache/cordova-plugin-dialogs/blob/master/doc/index.md -->
+    <gap:plugin name="org.apache.cordova.dialogs" />
+   <!-- https://github.com/apache/cordova-plugin-device-orientation/blob/master/doc/index.md -->
+    <gap:plugin name="org.apache.cordova.device-orientation" version="0.3.9" />
+
+    <plugin name="net.roughshod.plugins.barcodescanner" spec="3.0.0" source="pgb" />   
+    
+    
+    <access origin="*" />
+    
+    <gap:config-file platform="ios" parent="UIStatusBarHidden">
+        <true/>
+    </gap:config-file>
+
+    <gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance">
+        <false/>
+    </gap:config-file>    
+
+</widget>

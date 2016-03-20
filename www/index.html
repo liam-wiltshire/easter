@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href='app.css' />
+        <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+        <script src="cordova.js"></script>
+    </head>
+    <body>
+        <h1>Scan your code</h1>
+        
+        <script>
+            cordova.plugins.barcodeScanner.scan(
+               function (result) {
+                   alert("We got a barcode\n" +
+                         "Result: " + result.text + "\n" +
+                         "Format: " + result.format + "\n" +
+                         "Cancelled: " + result.cancelled);
+                 
+                    document.location.href=result.text + ".html";
+               }, 
+               function (error) {
+                   alert("Scanning failed: " + error);
+               }
+            );
+        </script>
+        
+        <footer>
+            <a href='index.html'>
+                <img src='images/scan.png' />
+            </a>
+        </footer>            
+    </body>
+</html>
